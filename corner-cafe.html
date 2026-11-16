@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Corner Café – Coffee, Bakery &amp; Sandwiches</title>
+<meta name="description" content="Corner Café is a neighborhood coffee shop and bakery. Browse the menu, see opening hours and send an enquiry on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Corner Café","telephone":"+910000000000","address":{"@type":"PostalAddress","streetAddress":"12 Garden Lane","addressLocality":"Your City"},"servesCuisine":"Coffee, Bakery"}</script>
+<style>
+:root{--bg:#fbf4e6;--surface:#fffaf0;--peach:#f7d9c4;--sage:#7d9a78;--sage-d:#4f6b4b;--yellow:#f1cf6b;--text:#3e2a1e;--muted:#6f5a4b;--line:#e6d8c1;--on-sage:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241812;--surface:#32231a;--peach:#4a3326;--sage:#9db598;--sage-d:#b5cab0;--yellow:#d9b657;--text:#f6ecda;--muted:#cbb9a3;--line:#4a372a;--on-sage:#1f2a1d}}
+:root[data-theme="dark"]{--bg:#241812;--surface:#32231a;--peach:#4a3326;--sage:#9db598;--sage-d:#b5cab0;--yellow:#d9b657;--text:#f6ecda;--muted:#cbb9a3;--line:#4a372a;--on-sage:#1f2a1d}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.65 Figtree,system-ui,sans-serif;transition:background .3s,color .3s;overflow-x:hidden}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.1;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(2.4rem,9vw,5rem);font-weight:800}
+h2{font-size:clamp(1.8rem,5vw,3rem);font-weight:700}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0 0 1em;max-width:60ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(3rem,8vw,6rem) 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.7rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--sage-d);cursor:pointer;font-family:inherit;font-size:1rem;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--sage-d);color:var(--bg)}
+.btn.ghost{background:transparent;color:var(--text)}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:68px}
+.logo{font:800 1.35rem 'Bricolage Grotesque',sans-serif;text-decoration:none;display:flex;align-items:center;gap:.5rem}
+.logo span{display:grid;place-items:center;width:34px;height:34px;border-radius:50% 50% 50% 8px;background:var(--yellow);color:#3e2a1e;font-size:1rem}
+nav ul{list-style:none;display:none;margin:0;padding:0;gap:1.4rem;align-items:center}
+nav a{text-decoration:none;font-weight:500;padding:.5rem 0}
+nav a:hover{color:var(--sage-d)}
+.tools{display:flex;gap:.5rem;align-items:center}
+.icon-btn{width:48px;height:48px;border-radius:50%;border:2px solid var(--line);background:var(--surface);color:var(--text);cursor:pointer;font-size:1.15rem}
+.menu-btn{display:inline-grid;place-items:center}
+nav.open ul{display:flex;flex-direction:column;align-items:flex-start;position:absolute;left:0;right:0;top:68px;background:var(--bg);padding:1rem 1.25rem 1.5rem;border-bottom:1px solid var(--line)}
+@media(min-width:880px){nav ul{display:flex;position:static}.menu-btn{display:none}}
+.hero{padding-top:clamp(2rem,6vw,4rem)}
+.hero .wrap{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:880px){.hero .wrap{grid-template-columns:1.1fr .9fr}}
+.hero p{font-size:1.15rem;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.art{position:relative;background:var(--peach);border-radius:46% 54% 42% 58%/52% 44% 56% 48%;aspect-ratio:1;display:grid;place-items:center;max-width:520px;margin-inline:auto;width:100%}
+.art svg{width:82%;height:auto}
+.sticker{position:absolute;right:2%;bottom:6%;background:var(--yellow);color:#3e2a1e;border-radius:50%;width:104px;height:104px;display:grid;place-items:center;text-align:center;font:700 .9rem/1.15 'Bricolage Grotesque',sans-serif;transform:rotate(-10deg);animation:wob 6s ease-in-out infinite}
+@keyframes wob{50%{transform:rotate(6deg)}}
+@media(prefers-reduced-motion:reduce){.sticker{animation:none}html{scroll-behavior:auto}*{transition:none!important}}
+.sellers{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin-top:2rem}
+.pick{background:var(--surface);border-radius:28px 28px 28px 8px;padding:1.2rem;display:flex;flex-direction:column;gap:.3rem;border:1px solid var(--line)}
+.pick:nth-child(even){border-radius:28px 8px 28px 28px;background:var(--peach)}
+.thumb{height:120px;border-radius:18px;display:grid;place-items:center;font-size:3.4rem;background:var(--bg);margin-bottom:.5rem}
+.price{font-weight:700;color:var(--sage-d)}
+.pick p{font-size:.95rem;color:var(--muted);margin:0}
+.story .wrap{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:880px){.story .wrap{grid-template-columns:.9fr 1.1fr}}
+.collage{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.collage div{border-radius:30px;display:grid;place-items:center;font-size:4rem;aspect-ratio:1}
+.collage div:nth-child(1){background:var(--sage);border-radius:30px 30px 100px 30px}
+.collage div:nth-child(2){background:var(--yellow);margin-top:2rem}
+.collage div:nth-child(3){background:var(--peach);margin-top:-2rem}
+.collage div:nth-child(4){background:var(--surface);border:1px solid var(--line);border-radius:100px 30px 30px 30px}
+.menu{background:var(--surface)}
+.filters{display:flex;gap:.5rem;overflow-x:auto;padding:.3rem 0 1rem;scrollbar-width:thin}
+.chip{flex:none;min-height:44px;padding:.4rem 1.1rem;border-radius:999px;border:2px solid var(--line);background:var(--bg);color:var(--text);font:600 .95rem Figtree,sans-serif;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--sage-d);color:var(--bg);border-color:var(--sage-d)}
+.items{list-style:none;margin:0;padding:0;display:grid;gap:0 3rem}
+@media(min-width:800px){.items{grid-template-columns:1fr 1fr}}
+.items li{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:2px dotted var(--line)}
+.items b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem}
+.items small{color:var(--muted)}
+.fresh .wrap{background:var(--sage);color:var(--on-sage);border-radius:40px;padding:clamp(1.8rem,5vw,3.5rem);display:grid;gap:1.5rem}
+@media(min-width:800px){.fresh .wrap{grid-template-columns:1fr 1fr}}
+.fresh p{color:inherit}
+.gal{display:grid;gap:.8rem;grid-template-columns:repeat(2,1fr);margin-top:1.5rem}
+@media(min-width:800px){.gal{grid-template-columns:repeat(4,1fr)}}
+.gal button{border:0;border-radius:24px;aspect-ratio:1;font-size:3.2rem;cursor:pointer;display:grid;place-items:center;transition:transform .2s}
+.gal button:hover{transform:scale(1.03) rotate(-1deg)}
+.gal button:nth-child(3n+1){background:var(--peach)}.gal button:nth-child(3n+2){background:var(--sage)}.gal button:nth-child(3n){background:var(--yellow)}
+.gal button:nth-child(5){grid-column:span 2;aspect-ratio:2/1}
+dialog{border:0;border-radius:28px;padding:2rem;background:var(--surface);color:var(--text);text-align:center;max-width:min(92vw,460px)}
+dialog::backdrop{background:rgba(30,18,10,.7)}
+dialog .big{font-size:7rem;line-height:1.1}
+.offers{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:1.5rem}
+.offer{border:2px dashed var(--sage-d);border-radius:24px;padding:1.4rem}
+.offer p{margin:0;color:var(--muted)}
+.review{background:var(--peach);border-radius:28px;padding:1.5rem;max-width:620px}
+.visit .wrap{display:grid;gap:2rem}
+@media(min-width:880px){.visit .wrap{grid-template-columns:1fr 1fr}}
+table{border-collapse:collapse;width:100%;max-width:380px}
+td{padding:.45rem 0;border-bottom:1px solid var(--line)}td:last-child{text-align:right;font-weight:600}
+.map{background:var(--peach);border-radius:30px;min-height:260px;display:grid;place-items:center;text-align:center;padding:1.5rem}
+footer{background:var(--text);color:var(--bg);padding:2.5rem 0 3rem}
+footer .wrap{display:grid;gap:1.5rem}
+@media(min-width:800px){footer .wrap{grid-template-columns:1.2fr 1fr 1fr}}
+footer a{display:inline-block;padding:.2rem 0}
+footer ul{list-style:none;margin:0;padding:0}
+.note{font-size:.85rem;opacity:.8}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap nav">
+<a class="logo" href="#home" aria-label="Corner Café home"><span aria-hidden="true">C</span>Corner Café</a>
+<nav id="nav" aria-label="Main">
+<ul>
+<li><a href="#home">Home</a></li><li><a href="#story">Our Story</a></li><li><a href="#menu">Menu</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#visit">Contact</a></li>
+<li><a class="btn primary" data-wa href="#">Order Now</a></li>
+</ul>
+</nav>
+<div class="tools">
+<button class="icon-btn" id="theme" aria-label="Switch to dark theme" type="button">🌙</button>
+<button class="icon-btn menu-btn" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav" type="button">☰</button>
+</div>
+</div>
+</header>
+
+<main id="home">
+<section class="hero"><div class="wrap">
+<div>
+<h1>Your little corner of happiness.</h1>
+<p>Fresh coffee, warm pastries and simple sandwiches, made every morning on our street. Come in for five minutes or stay for the afternoon.</p>
+<div class="cta"><a class="btn primary" href="#menu">Explore menu</a><a class="btn ghost" data-wa href="#">Order now</a></div>
+</div>
+<div class="art" role="img" aria-label="Illustration of a coffee cup and croissant">
+<svg viewBox="0 0 300 300" aria-hidden="true">
+<ellipse cx="150" cy="248" rx="112" ry="16" fill="#3e2a1e" opacity=".15"/>
+<path d="M70 120h140v70a58 58 0 0 1-58 58h-24a58 58 0 0 1-58-58z" fill="#fffaf0" stroke="#3e2a1e" stroke-width="6"/>
+<path d="M210 140h18a24 24 0 0 1 0 48h-22" fill="none" stroke="#3e2a1e" stroke-width="6"/>
+<path d="M70 132h140" stroke="#3e2a1e" stroke-width="6"/>
+<path d="M78 134h124v14H78z" fill="#7d9a78"/>
+<path d="M120 90c-10-18 12-24 0-42M155 90c-10-18 12-24 0-42M190 90c-10-18 12-24 0-42" fill="none" stroke="#3e2a1e" stroke-width="6" stroke-linecap="round"/>
+<path d="M30 250c10-34 50-48 88-42-8 20-30 40-88 42z" fill="#f1cf6b" stroke="#3e2a1e" stroke-width="5"/>
+</svg>
+<div class="sticker">Baked<br>fresh<br>daily</div>
+</div>
+</div></section>
+
+<section id="best"><div class="wrap">
+<h2>Best sellers</h2>
+<p>Sample items for you to replace with your own favourites and prices.</p>
+<div class="sellers" id="sellers"></div>
+</div></section>
+
+<section class="story" id="story"><div class="wrap">
+<div class="collage" aria-hidden="true"><div>☕</div><div>🥐</div><div>🥪</div><div>🍰</div></div>
+<div>
+<h2>A neighborhood spot, run by neighbors.</h2>
+<p>Write your story here: who started the café, what you love making, and why people keep coming back. Keep it short and true to your place.</p>
+<p>Tell visitors what makes you different, such as a recipe from home, a favourite bean, or the table by the window.</p>
+</div>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+<h2>Menu</h2>
+<div class="filters" role="group" aria-label="Menu categories" id="filters"></div>
+<ul class="items" id="items" aria-live="polite"></ul>
+<p class="note">Prices are samples. Edit the MENU list in the page script to match your café.</p>
+</div></section>
+
+<section class="fresh"><div class="wrap">
+<div><h2>Freshly made</h2><p>Use this space to describe what is prepared in-house, how you source ingredients and what changes each day.</p></div>
+<div><h3>Today’s specials</h3><p>Add the day’s specials here, for example a loaf, a filled croissant or a seasonal drink. Only list what you actually make.</p><a class="btn primary" style="background:var(--bg);color:var(--text);border-color:var(--bg)" data-wa href="#">Ask what’s fresh today</a></div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+<h2>Gallery</h2>
+<p>Placeholder tiles. Swap in your own coffee, bakery and café photos (WebP or AVIF, lazy loaded).</p>
+<div class="gal" id="gal"></div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Offers &amp; combos</h2>
+<div class="offers">
+<div class="offer"><h3>Your combo name</h3><p>Describe an offer you really run, with its price and dates.</p></div>
+<div class="offer"><h3>Another offer</h3><p>Leave this out if you have nothing running.</p></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>What neighbors say</h2>
+<div class="review"><p>No reviews added yet. Paste real customer comments here, with their permission.</p></div>
+</div></section>
+
+<section class="visit" id="visit"><div class="wrap">
+<div>
+<h2>Visit us</h2>
+<p>12 Garden Lane, Your City<br><a href="tel:+910000000000">+91 00000 00000</a></p>
+<table aria-label="Opening hours"><tbody>
+<tr><td>Mon–Fri</td><td>8:00 – 20:00</td></tr>
+<tr><td>Saturday</td><td>8:00 – 21:00</td></tr>
+<tr><td>Sunday</td><td>9:00 – 18:00</td></tr>
+</tbody></table>
+<div class="cta"><a class="btn primary" href="https://www.google.com/maps/dir/?api=1&destination=12+Garden+Lane+Your+City" target="_blank" rel="noopener">Get directions</a><a class="btn ghost" href="tel:+910000000000">Call us</a><a class="btn ghost" data-wa href="#">WhatsApp</a></div>
+</div>
+<div class="map"><div><div style="font-size:3rem" aria-hidden="true">📍</div><p style="margin-inline:auto">Map embeds are not available on this page. Directions open in Google Maps.</p></div></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div><div class="logo" style="color:var(--bg)">Corner Café</div><p class="note">Coffee, bakery and sandwiches.<br>12 Garden Lane, Your City</p></div>
+<ul><li><a href="#story">Our Story</a></li><li><a href="#menu">Menu</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#visit">Contact</a></li></ul>
+<ul><li>Mon–Fri 8:00–20:00</li><li>Sat 8:00–21:00</li><li>Sun 9:00–18:00</li><li><a href="#">Instagram</a> · <a href="#">Facebook</a></li></ul>
+</div></footer>
+
+<dialog id="lb" aria-label="Photo preview"><div class="big" id="lbArt" aria-hidden="true"></div><p id="lbCap"></p><button class="btn primary" id="lbClose" type="button">Close</button></dialog>
+
+<script>
+const CFG={whatsapp:"910000000000",text:"Hi Corner Café, I’d like to place an enquiry."};
+const MENU={
+"Hot coffee":[["Flat white","Double shot, silky milk",150,"☕"],["Cappuccino","Espresso, foam, cocoa",140,"☕"],["Filter coffee","Classic South Indian style",90,"☕"]],
+"Cold coffee":[["Iced latte","Espresso over ice and milk",170,"🧊"],["Cold brew","Steeped slowly",180,"🧊"]],
+"Tea":[["Masala chai","Spiced and strong",70,"🍵"],["Green tea","Light and clean",80,"🍵"]],
+"Bakery":[["Butter croissant","Flaky and golden",110,"🥐"],["Blueberry muffin","Soft crumb",100,"🧁"],["Sourdough slice","With butter",90,"🍞"]],
+"Sandwiches":[["Veg grilled sandwich","Cheese, veg, green chutney",150,"🥪"],["Chicken club","Toasted, with fries",220,"🥪"]],
+"Desserts":[["Chocolate brownie","Fudgy, with a dusting of cocoa",120,"🍫"],["Cheesecake slice","Baked, with fruit",190,"🍰"]]};
+const inr=n=>"₹"+n;
+const $=s=>document.querySelector(s);
+const wa="https://wa.me/"+CFG.whatsapp+"?text="+encodeURIComponent(CFG.text);
+document.querySelectorAll("[data-wa]").forEach(a=>{a.href=wa;a.target="_blank";a.rel="noopener"});
+// best sellers
+$("#sellers").innerHTML=[MENU["Hot coffee"][0],MENU["Bakery"][0],MENU["Sandwiches"][0],MENU["Desserts"][0]].map(i=>`<article class="pick"><div class="thumb" aria-hidden="true">${i[3]}</div><h3>${i[0]}</h3><p>${i[1]}</p><span class="price">${inr(i[2])}</span></article>`).join("");
+// menu filter
+const cats=["All",...Object.keys(MENU)];let cur="All";
+function draw(){
+ $("#filters").innerHTML=cats.map(c=>`<button class="chip" type="button" aria-pressed="${c===cur}" data-c="${c}">${c}</button>`).join("");
+ const list=cur==="All"?Object.values(MENU).flat():MENU[cur];
+ $("#items").innerHTML=list.map(i=>`<li><div><b>${i[0]}</b><small>${i[1]}</small></div><span class="price">${inr(i[2])}</span></li>`).join("");
+}
+$("#filters").addEventListener("click",e=>{const b=e.target.closest("[data-c]");if(b){cur=b.dataset.c;draw();$(`[data-c="${cur}"]`).focus()}});
+draw();
+// gallery + lightbox
+const G=[["☕","Coffee"],["🥐","Pastries"],["🍰","Desserts"],["🥪","Sandwiches"],["🪑","Café interior"],["🧁","Muffins"],["🍞","Fresh bread"]];
+$("#gal").innerHTML=G.map((g,i)=>`<button type="button" data-i="${i}" aria-label="Open ${g[1]}">${g[0]}</button>`).join("");
+const lb=$("#lb");
+$("#gal").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const g=G[b.dataset.i];$("#lbArt").textContent=g[0];$("#lbCap").textContent=g[1];lb.showModal()});
+$("#lbClose").onclick=()=>lb.close();
+lb.addEventListener("click",e=>{if(e.target===lb)lb.close()});
+// mobile nav
+const nav=$("#nav"),bg=$("#burger");
+bg.onclick=()=>{const o=nav.classList.toggle("open");bg.setAttribute("aria-expanded",o);bg.textContent=o?"✕":"☰"};
+nav.addEventListener("click",e=>{if(e.target.closest("a")){nav.classList.remove("open");bg.setAttribute("aria-expanded","false");bg.textContent="☰"}});
+// theme
+const root=document.documentElement,tb=$("#theme");
+function isDark(){return root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches}
+function sync(){const d=isDark();tb.textContent=d?"☀️":"🌙";tb.setAttribute("aria-label",d?"Switch to light theme":"Switch to dark theme")}
+try{const s=localStorage.getItem("theme");if(s)root.dataset.theme=s}catch(e){}
+sync();
+tb.onclick=()=>{const n=isDark()?"light":"dark";root.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}sync()};
+</script>
+</body>
+</html>
